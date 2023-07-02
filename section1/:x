@@ -1,0 +1,13 @@
+from random import shuffle 
+
+def make_ramdom_sentence(sentence):
+    sentence_list = sentence.strip().split()
+    random_sentence_list = []
+
+    for word in sentence_list:
+        random_sentence_list = word[0] + random.shuffle(word[1:-1]) + word[-1]
+
+    # random_sentence = "".join([word[index] for index in shuffle(list(range(0, len(word))))] for word in sentence_list[1:-1])
+
+
+random_sentence = make_ramdom_sentence("I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind .")
